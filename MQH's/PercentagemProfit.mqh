@@ -5,9 +5,9 @@
 
 #include "parametros.mqh"
 
-int     BuyPercentage, SellPercentage;
+double  BuyPercentage, SellPercentage;
 double  AcountMoney = AccountBalance();
-double sellprofit, buyprofit;
+double  sellprofit, buyprofit;
 
 void BUYTRADESPROFITLOSS(){
     buyprofit = BUYGAINPERCENTAGE(MAGICNUMBER);
