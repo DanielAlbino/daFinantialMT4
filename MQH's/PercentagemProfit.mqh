@@ -49,3 +49,4 @@ double BUYGAINPERCENTAGE(int magic)
    }
    return sellspercent;
 }
+
