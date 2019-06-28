@@ -5,7 +5,6 @@
 
 #include "includes.mqh"
 
-
 double  BuyPercentage, SellPercentage;
 double  AcountMoney = AccountBalance();
 double  sellprofit, buyprofit;
