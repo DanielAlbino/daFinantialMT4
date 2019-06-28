@@ -1,7 +1,6 @@
 //+------------------------------------------------------------------+
 //|                                                  PrintScreen.mqh |
 //|                                    Copyright 2019, Daniel Albino |
-//|                                             https://www.mql5.com |
 //+------------------------------------------------------------------+
 #property copyright "Copyright 2019, Daniel Albino"
 #property link      ""

@@ -3,8 +3,8 @@
 //|                                    Copyright 2019, Daniel Albino |
 //+------------------------------------------------------------------+
 
-#include "parametros.mqh"
-#include "PrintScreen.mqh"
+#include "includes.mqh"
+
 
 double  BuyPercentage, SellPercentage;
 double  AcountMoney = AccountBalance();
