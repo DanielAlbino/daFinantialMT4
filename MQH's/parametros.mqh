@@ -2,6 +2,9 @@
 //|                                                   Parametros.mqh |
 //|                                    Copyright 2019, Daniel Albino |
 //+------------------------------------------------------------------+
+#property copyright "Copyright 2019, Daniel Albino"
+#property link      ""
+#property strict
 
 input string    txt         = "-- MAGIC NUMBER--";    
 input int       MAGICNUMBER = 1001;     // magic number

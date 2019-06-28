@@ -1,8 +1,10 @@
-
-/* -------------------------------------------------------------
-|   ORDERS TOTAL
-|   Author: Daniel Albino
----------------------------------------------------------------*/ 
+//+------------------------------------------------------------------+
+//|                                                  OrdersTotal.mqh |
+//|                                    Copyright 2019, Daniel Albino |
+//+------------------------------------------------------------------+
+#property copyright "Copyright 2019, Daniel Albino"
+#property link      ""
+#property strict
 
 int ORDERBUY(int magic){
     int buys = 0
