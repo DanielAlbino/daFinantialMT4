@@ -4,6 +4,7 @@
 //+------------------------------------------------------------------+
 
 #include "parametros.mqh"
+#include "PrintScreen.mqh"
 
 double  BuyPercentage, SellPercentage;
 double  AcountMoney = AccountBalance();
@@ -12,11 +13,13 @@ double  sellprofit, buyprofit;
 void BUYTRADESPROFITLOSS(){
     buyprofit = BUYGAINPERCENTAGE(MAGICNUMBER);
     BuyPercentage = (buyprofit*100)/AcountMoney;
+    PrintText2("buy", "% BUY: ", BuyPercentage,200,10,clrGreen);
 }
 
 void SELLTRADESPROFITLOSS(){
     sellprofit = SELLGAINPERCENTAGE(MAGICNUMBER);
     SellPercentage = (sellprofit*100)/AcountMoney;
+     PrintText2("sell", "% SELL: ", SellPercentage,300,10,clrRed);
 }
 
 
