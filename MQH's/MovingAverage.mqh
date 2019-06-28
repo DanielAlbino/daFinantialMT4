@@ -18,7 +18,7 @@ double SMA(int tmp, int prd)
 
 double EMA(int tmp, int prd)
 {
-   double MM =0;
+   double MM = 0;
    MM = iMA(Symbol(),tmp,prd,0,MODE_EMA,PRICE_CLOSE,0);
    
    return MM;
@@ -26,7 +26,7 @@ double EMA(int tmp, int prd)
 
 double SMMA(int tmp, int prd)
 {
-   double MM =0;
+   double MM = 0;
    MM = iMA(Symbol(),tmp,prd,0,MODE_SMMA,PRICE_CLOSE,0);
    
    return MM;
@@ -34,7 +34,7 @@ double SMMA(int tmp, int prd)
 
 double LWMA(int tmp, int prd)
 {
-   double MM =0;
+   double MM = 0;
    MM = iMA(Symbol(),tmp,prd,0,MODE_LWMA,PRICE_CLOSE,0);
    
    return MM;
