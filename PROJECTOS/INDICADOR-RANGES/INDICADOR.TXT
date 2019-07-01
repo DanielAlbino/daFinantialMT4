@@ -1,0 +1,4 @@
+// rectangulo é criado nas primeiras 7 velas
+// range é entre a vela mais baixa e a mais alta (hihg e low)
+// quando preço passa para baixo ou para cima uma vela indica trade
+// linhas horizontais a 24 velas
