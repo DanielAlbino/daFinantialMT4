@@ -3,6 +3,11 @@
 // quando preço passa para baixo ou para cima uma vela indica trade
 // linhas horizontais a 24 velas
 
+/*
+    a 1H se for 24 velas é as 24h do dia
+*/
+
+
 int candlesrange = 24;
 int hlrange      = 7;
 double HigherHigh = 0;
