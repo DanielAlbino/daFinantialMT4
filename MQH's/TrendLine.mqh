@@ -18,12 +18,28 @@
 // ------------------------------------------------------------------------------------------------------
 
 
+// VARIAVEIS ---------------------------
+
+double HH = 0;
+double LL = 9999999;
+
+int NBARS = 24;
+
+
 void HIGHERHIGH(){
+
+    for (int i = 0; i < NBARS; i++){
+        if(High[i] > HH){ HH = High[i];}
+    }
+
 
 }
 
 void LOWERLOW(){
 
+    for (int i = 0; i < NBARS; i++){
+        if(Low[i] < LL){ LL = Low[i];} 
+    }
 }
 
 // ObjectCreate(chart_ID,name,OBJ_TREND,sub_window,time1,price1,time2,price2)
