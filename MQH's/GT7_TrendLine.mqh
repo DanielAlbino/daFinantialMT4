@@ -48,9 +48,9 @@ void LOWERLOW(){
         if((Low[i] < LL2) && (LL < LL2)){ LL2 = Low[i];}  
     }
 
-    if(LL < 999 && LL2 < 999){
+/*     if(LL < 999 && LL2 < 999){
       TRENDLINE("llTrend", ltime1, LL, ltime2, LL2, clrRed); 
-    }
+    } */
 }
 
 // ObjectCreate(chart_ID,name,OBJ_TREND,sub_window,time1,price1,time2,price2)
