@@ -14,7 +14,7 @@ double HigherHigh = 0;
 double LowerLow = 999;
 
 void createRetangle(){
-/*     RectangleCreate(const long            chart_ID=0,        // chart's ID
+/*     RectangleCreate(const long            chart_ID=0,       // chart's ID
                      const string          name="Rectangle",  // rectangle name
                      const int             sub_window=0,      // subwindow index 
                      datetime              time1=0,           // first point time
