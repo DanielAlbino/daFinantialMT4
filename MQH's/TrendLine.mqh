@@ -54,7 +54,7 @@ void HIGHERHIGH(){
 }
 
 void LOWERLOW(){
-    if(bid < sma){
+    if(Bid < sma){
         for (int i = 1; i < NBARS; i++){
             if(Low[i] < LL){ LL = Low[i];} 
             if((Low[i] < LL2) && (LL < LL2)){ LL2 = Low[i];}  
