@@ -34,8 +34,10 @@ int NBARS = 24;
 void HIGHERHIGH(){
 
     for (int i = 1; i < NBARS; i++){
-        if(High[i] > HH){ HH = High[i]; time1 = TimeCurrent();}
+        if(High[i] > HH){ HH = High[i]; time1 = TimeCurrent(); LL = 999; LL2 = 999;}
         if((High[i] > HH2) && (HH > HH2) && (LL < HH)){ HH2 = High[i]; time2 = TimeCurrent();} 
+
+
     }
     if(HH > 0 && HH2 > 0){
       TRENDLINE("hhTrend", htime1, HH, htime2, HH2, clrGreen); 
@@ -46,9 +48,8 @@ void LOWERLOW(){
 
     for (int i = 1; i < NBARS; i++){
         if(Low[i] < LL){ LL = Low[i];} 
-        if((Low[i] < LL2) && (LL < LL2){ LL2 = Low[i];}  
+        if((Low[i] < LL2) && (LL < LL2)){ LL2 = Low[i];}  
     }
-
     if(LL < 999 && LL2 < 999){
       TRENDLINE("hhTrend", ltime1, LL, ltime2, LL2, clrRed); 
     }
