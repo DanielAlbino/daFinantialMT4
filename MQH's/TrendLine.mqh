@@ -10,7 +10,6 @@
 
 // VERIFICAR COMO FAZER LINHA DE TENDÊNCIA
 // LINHA É TRAÇADA EM 1 HIGHER HIGH e 2 HIGHER LOW
-// ENCONTRAR 3 HIGHER HIGHS E LOWER LOWS
 // MOSTRAR A LINHA NO ECRÃ
 
 // ------------------------------------------------------------------------------------------------------
