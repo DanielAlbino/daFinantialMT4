@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
-//|                                                    TrendLine.mqh |
-//|                                    Copyright 2019, Daniel Albino |
+//|                                                GT7_TrendLine.mqh |
+//|                                        Copyright 2019, Gtraders7 |
 //+------------------------------------------------------------------+
 #property copyright "Copyright 2019, Daniel Albino"
 #property link      ""
@@ -29,28 +29,42 @@ datetime ltime1, ltime2;
 
 int NBARS = 24;
 
+input string    = "--SMA--";
+int   timeframe = 15;
+int   period    = 200;
+
+double sma = iMA(Symbol(),timeframe,period,0,MODE_SMA,PRICE_CLOSE,0);
+
+
+void MEDIASMOVEIS(){
+    sma = iMA(Symbol(),timeframe,period,0,MODE_SMA,PRICE_CLOSE,0);
+}
 
 void HIGHERHIGH(){
+    if(Ask > sma){
+        for (int i = 1; i < NBARS; i++){
+            if(High[i] > HH){ HH = High[i]; htime1 = TimeCurrent();}
+            if((High[i] > HH2) && (HH > HH2) && (LL < HH)){ HH2 = High[i]; htime2 = TimeCurrent();} 
+        }
 
-    for (int i = 1; i < NBARS; i++){
-        if(High[i] > HH){ HH = High[i]; htime1 = TimeCurrent();}
-        if((High[i] > HH2) && (HH > HH2) && (LL < HH)){ HH2 = High[i]; htime2 = TimeCurrent();} 
-    }
-    if(HH > 0 && HH2 > 0){
-      TRENDLINE("hhTrend", htime1, HH, htime2, HH2, clrGreen); 
+        if(HH > 0 && HH2 > 0){
+        TRENDLINE("hhTrend", htime1, HH, htime2, HH2, clrGreen); 
+        }
     }
 }
 
 void LOWERLOW(){
+    if(Bid < sma){
+        for (int i = 1; i < NBARS; i++){
+            if(Low[i] < LL){ LL = Low[i];} 
+            if((Low[i] < LL2) && (LL < LL2)){ LL2 = Low[i];}  
+        }
 
-    for (int i = 1; i < NBARS; i++){
-        if(Low[i] < LL){ LL = Low[i];} 
-        if((Low[i] < LL2) && (LL < LL2)){ LL2 = Low[i];}  
+        if(LL < 999 && LL2 < 999){
+            TRENDLINE("llTrend", ltime1, LL, ltime2, LL2, clrRed); 
+        }
     }
-
-/*     if(LL < 999 && LL2 < 999){
-      TRENDLINE("llTrend", ltime1, LL, ltime2, LL2, clrRed); 
-    } */
+    
 }
 
 // ObjectCreate(chart_ID,name,OBJ_TREND,sub_window,time1,price1,time2,price2)

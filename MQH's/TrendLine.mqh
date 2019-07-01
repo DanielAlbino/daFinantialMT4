@@ -31,7 +31,7 @@ int NBARS = 24;
 
 input string    = "--SMA--";
 int   timeframe = 15;
-int   period    = 100;
+int   period    = 200;
 
 double sma = iMA(Symbol(),timeframe,period,0,MODE_SMA,PRICE_CLOSE,0);
 
