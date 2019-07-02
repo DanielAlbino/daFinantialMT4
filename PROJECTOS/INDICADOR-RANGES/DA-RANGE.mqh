@@ -6,7 +6,7 @@
 
 
 /*
-    a 1H se for 24 velas é as 24h do dia
+    inicia nas 17h e termina a 1h da manhã (9horas)
 */
 const long            chart_ID=0;       // chart's ID
 const string          name="Rectangle";  // rectangle name
@@ -38,7 +38,7 @@ void HigherandLow(){
    
 }
 
-void createRetangle(  long            chart_ID,       // chart's ID
+void createRetangle(  long           chart_ID,       // chart's ID
                      string          name,            // rectangle name
                      int             sub_window,      // subwindow index 
                      datetime        time1,           // first point time
