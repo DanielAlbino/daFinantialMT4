@@ -41,16 +41,19 @@ void MEDIASMOVEIS(){
 }
 
 void HIGHERHIGH(){
-    if(Ask > sma){
         for (int i = 1; i < NBARS; i++){
             if(High[i] > HH){ HH = High[i]; htime1 = TimeCurrent();}
-            if((High[i] > HH2) && (HH > HH2) && (LL < HH)){ HH2 = High[i]; htime2 = TimeCurrent();} 
+            if((High[i] > HH2) && (HH > HH2) && (LL < HH)){
+                 HH2 = High[i]; htime2 = TimeCurrent();
+                 LL = 9999999;
+                 LL2 = 9999999;
+            } 
         }
 
         if(HH > 0 && HH2 > 0){
         TRENDLINE("hhTrend", htime1, HH, htime2, HH2, clrGreen); 
+
         }
-    }
 }
 
 void LOWERLOW(){
@@ -58,10 +61,6 @@ void LOWERLOW(){
         for (int i = 1; i < NBARS; i++){
             if(Low[i] < LL){ LL = Low[i];} 
             if((Low[i] < LL2) && (LL < LL2)){ LL2 = Low[i];}  
-        }
-
-        if(LL < 999 && LL2 < 999){
-            TRENDLINE("llTrend", ltime1, LL, ltime2, LL2, clrRed); 
         }
     }
     
@@ -73,7 +72,10 @@ void TRENDLINE(string object, datetime initTime, double initValue, datetime clos
            ObjectMove(object,0,Time[0],closeValue);
            ObjectSet(object, OBJPROP_STYLE, STYLE_SOLID);
            ObjectSet(object, OBJPROP_COLOR, cor);
-           ObjectSet(object, OBJPROP_WIDTH, 1);  
+           ObjectSet(object, OBJPROP_WIDTH, 1); 
+            HH = 0;
+            HH2 = 0;
+
 }
 
 
