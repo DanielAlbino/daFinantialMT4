@@ -41,13 +41,18 @@ void MEDIASMOVEIS(){
 }
 
 void HIGHERHIGH(){
-        for (int i = 1; i < NBARS; i++){
-            if(High[i] > HH){ HH = High[i]; htime1 = TimeCurrent();}
+        for (int i = 1; i < Bars; i++){
+            if(High[i] > HH){ HH = High[i]; htime1 = Time[i];}
             if((High[i] > HH2) && (HH > HH2) && (LL < HH)){
-                 HH2 = High[i]; htime2 = TimeCurrent();
+                 HH2 = High[i]; htime2 = Time[i];
                  LL = 9999999;
                  LL2 = 9999999;
             } 
+             if((High[i] > HH)  && (LL == 9999999) && (HH > 0)){
+                 HH2 = High[i]; htime2 = Time[i];
+                 LL = 9999999;
+                 LL2 = 9999999;
+            }
         }
 
         if(HH > 0 && HH2 > 0){
