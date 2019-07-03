@@ -1,4 +1,5 @@
 void OnTick(){
+    int TIMEFRAME = 60;
     //define o fim do periodo de abertura
     string EndofOpeningPeriod = "08:00:";
 
@@ -6,13 +7,13 @@ void OnTick(){
 
     int EndofOpeningPeriodFound = StringFind(CURRENTTIME,EndofOpeningPeriod,0);
 
-    int HighestCandle =  iHighest(_Symbol,_Period,MODE_HIGH,7,1);
-    int LowestCandle =  iLowest(_Symbol,_Period,MODE_LOW,7,1);
+    int HighestCandle =  iHighest(_Symbol,TIMEFRAME,MODE_HIGH,7,1);
+    int LowestCandle =  iLowest(_Symbol,TIMEFRAME,MODE_LOW,7,1);
 
     //output the current time
     Comment("Current Time: ", CURRENTTIME);
 
-    if(EndofOpeningPeriodFound != -1){
+    if(EndofOpeningPeriodFound != -1 ){
 
         //delete the object if exists
         ObjectDelete("Rectangle");
