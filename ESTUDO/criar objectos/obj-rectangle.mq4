@@ -19,7 +19,7 @@ void OnTick(){
         ObjectDelete("Rectangle");
 
         //create object
-        ObjectCreate("Rectangle",OBJ_ECTANGLE,0,Time[0],High[HighestCandle],Time[7],Low[LowestCandle]);
+        ObjectCreate("Rectangle",OBJ_ECTANGLE,0,Time[1],High[HighestCandle],Time[7],Low[LowestCandle]);
 
     }
 }
