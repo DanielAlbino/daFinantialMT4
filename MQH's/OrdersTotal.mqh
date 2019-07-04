@@ -11,7 +11,7 @@ int ORDERBUY(int magic){
      for( int i = 0 ; i < OrdersTotal() ; i++ ) {
       OrderSelect( i, SELECT_BY_POS, MODE_TRADES );
       if( OrderMagicNumber() == magic ){
-          if(OrderType == OP_BUY){
+          if(OrderType() == OP_BUY){
               buys++;
           }
       }
@@ -25,7 +25,7 @@ int  ORDERSELL(int magic){
      for( int i = 0 ; i < OrdersTotal() ; i++ ) {
       OrderSelect( i, SELECT_BY_POS, MODE_TRADES );
       if( OrderMagicNumber() == magic){
-          if(OrderType == OP_SELL){
+          if(OrderType() == OP_SELL){
             sells++;
           }
       }
