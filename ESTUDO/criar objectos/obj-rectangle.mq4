@@ -13,7 +13,7 @@ void OnTick(){
     //output the current time
     Comment("Current Time: ", CURRENTTIME);
 
-    if(EndofOpeningPeriodFound != -1 && ){
+    if(EndofOpeningPeriodFound != -1){
 
         switch(Period())
         {
@@ -23,12 +23,22 @@ void OnTick(){
                 //create object
                 ObjectCreate("Rectangle",OBJ_ECTANGLE,0,Time[1],High[HighestCandle],Time[28],Low[LowestCandle]);
                 break;
+                
             case 60: 
                  //delete the object if exists
                 ObjectDelete("Rectangle");
                 //create object
                 ObjectCreate("Rectangle",OBJ_ECTANGLE,0,Time[1],High[HighestCandle],Time[7],Low[LowestCandle]);
                 break;
+
+            case 240: 
+                 //delete the object if exists
+                ObjectDelete("Rectangle");
+                //create object
+                ObjectCreate("Rectangle",OBJ_ECTANGLE,0,Time[1],High[HighestCandle],Time[3],Low[LowestCandle]);
+                break;
+
+            default: 0;
         }
     }
 }

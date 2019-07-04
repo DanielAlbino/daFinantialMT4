@@ -49,7 +49,7 @@ void HIGHERHIGH(){
                  LL2 = 9999999;
             } 
              if((High[i] > HH)  && (LL == 9999999) && (HH > 0)){
-                 HH2 = High[i]; htime2 = Time[i];
+                 HH = High[i]; htime1 = Time[i];
                  LL = 9999999;
                  LL2 = 9999999;
             }
