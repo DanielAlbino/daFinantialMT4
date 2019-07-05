@@ -17,7 +17,7 @@
 
 
 // VARIAVEIS ---------------------------
-
+int    NBARS = 24;
 double HH = 0;
 double HH2 = 0;
 
@@ -41,19 +41,18 @@ void MEDIASMOVEIS(){
 }
 
 void HIGHERHIGH(){
-        for (int i = 1; i < Bars; i++){
-            if(High[i] > HH){ HH = High[i]; htime1 = Time[i];}
-            if((High[i] > HH2) && (HH > HH2) && (LL < HH)){
-                 HH2 = High[i]; htime2 = Time[i];
+
+            if(High[iHighest(Symbol(),TIMEFRAME,MODE_HIGH,NBARS,1)] > HH){ HH = High[i]; htime1 = Time[i];}
+            if((High[iHighest(Symbol(),TIMEFRAME,MODE_HIGH,NBARS,1)] > HH2) && (HH > HH2 && HH > High[iHighest(Symbol(),TIMEFRAME,MODE_HIGH,NBARS,1)]) && (LL < HH)){
+                 HH2 = High[iHighest(Symbol(),TIMEFRAME,MODE_HIGH,NBARS,1)]; htime2 = Time[iHighest(Symbol(),TIMEFRAME,MODE_HIGH,NBARS,1)];
                  LL = 9999999;
                  LL2 = 9999999;
             } 
-             if((High[i] > HH)  && (LL == 9999999) && (HH > 0)){
-                 HH2 = High[i]; htime2 = Time[i];
+             if((High[iHighest(Symbol(),TIMEFRAME,MODE_HIGH,NBARS,1)] > HH)  && (LL == 9999999) && (HH > 0)){
+                 HH = High[iHighest(Symbol(),TIMEFRAME,MODE_HIGH,NBARS,1)]; htime1 = Time[iHighest(Symbol(),TIMEFRAME,MODE_HIGH,NBARS,1)];
                  LL = 9999999;
                  LL2 = 9999999;
             }
-        }
 
         if(HH > 0 && HH2 > 0){
         TRENDLINE("hhTrend", htime1, HH, htime2, HH2, clrGreen); 
@@ -62,12 +61,10 @@ void HIGHERHIGH(){
 }
 
 void LOWERLOW(){
-    if(Bid < sma){
-        for (int i = 1; i < NBARS; i++){
-            if(Low[i] < LL){ LL = Low[i];} 
-            if((Low[i] < LL2) && (LL < LL2)){ LL2 = Low[i];}  
-        }
-    }
+
+            if(Low[iLowest(Symbol(),TIMEFRAME,MODE_LOW,NBARS,1)] < LL){ LL = Low[iLowest(Symbol(),TIMEFRAME,MODE_LOW,NBARS,1)];} 
+            if((Low[iLowest(Symbol(),TIMEFRAME,MODE_LOW,NBARS,1)] < LL2) && (LL < LL2)){ LL2 = Low[iLowest(Symbol(),TIMEFRAME,MODE_LOW,NBARS,1)];}  
+
     
 }
 
