@@ -114,6 +114,7 @@ extern bool      ShowBarTime=true;
 extern bool      ShowLocal=true;
 extern bool      ShowBroker=true;
 extern bool      ShowGMT=true;
+
 //FOUND THE TIMES WHEN THE MARKETS WERE OPEN AT
 //World Financial Markets   http://www.2011.worldmarkethours.com/Forex/index1024.htm
 extern bool      Show_NEW_ZEALAND=true;//Auckland GMT+12
