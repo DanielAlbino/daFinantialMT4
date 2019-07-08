@@ -18,6 +18,7 @@ input string    txt3        = "-- TrailingStop --";
 input int       Trail       = 100;      // TrailingStop size
 
 input string    txt4        = "-- Money Management --";
+input double    lots        = 0.01;
 input double    minlote     = 0.01;     // minimum lot
 input double    lotsize     = 1;        // lot size
 input int       lotdigist   = 3;        // lot digits
@@ -46,9 +47,15 @@ input int          rsiperiod = 15;
 double  BuyPercentage, SellPercentage;
 double  AcountMoney = AccountBalance();
 double  sellprofit, buyprofit;
-  
-string CURRENTTIME = TimeToStr(TimeLocal(), TIME_SECONDS);
-int EndofOpeningPeriodFound = StringFind(CURRENTTIME,EndofOpeningPeriod,0);
+double  sma;
 double HighestCandle =  High[iHighest(_Symbol,TIMEFRAME,MODE_HIGH,NBackCandles,1)];
 double LowestCandle =  Low[iLowest(_Symbol,TIMEFRAME,MODE_LOW,NBackCandles,1)];
+double totalHL = 0.0;
+
+string CURRENTTIME = TimeToStr(TimeLocal(), TIME_SECONDS);
+
+int EndofOpeningPeriodFound = StringFind(CURRENTTIME,EndofOpeningPeriod,0);
+
+
+
 
