@@ -1,0 +1,38 @@
+/* ---------------------------------------------------------
+                        PROJECT FIVE-X
+   --------------------------------------------------------- */
+
+   Autor: Daniel Albino
+   data: 8-7-2019
+   equipa: Daniel Albino
+
+// ----------------------------------------------------------
+
+
+
+INDICADORES PARA ANALISE
+------------------------
+MACD
+RSI
+VOLUME
+MOVING AVERAGE
+------------------------
+
+PADRÕES BASE
+------------------------
+HIGHEST 1H
+LOWEST 1H
+OPEN   1H
+CLOSE  1H
+------------------------
+
+
+GESTÃO
+------------------------
+FECHO PERCENTUAL
+TRAILING STOP
+GESTÃO DE LOTES
+------------------------
+
+
+
