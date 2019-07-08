@@ -8,3 +8,12 @@
 #property strict
 
 #include "includes/includes.mqh"
+
+
+
+void OnTick(){
+     if(EndofOpeningPeriodFound != -1){
+        HighestCandle =  iHighest(_Symbol,TIMEFRAME,MODE_HIGH,7,1);
+        LowestCandle =  iLowest(_Symbol,TIMEFRAME,MODE_LOW,7,1);
+    }
+}

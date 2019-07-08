@@ -29,8 +29,14 @@ input string    txt5        = "-- Partial close --";
 input int       valor_fecho = 2;        // partial close
 
 
-int string      txt6        = "-- Percentual Close --";
-int double      percent     = 5.0;     // percentage
+input int string   txt6      = "-- Percentual Close --";
+input int double   percent   = 5.0;     // percentage
+
+input int string   txt6      = "-- TIME TO H/L --";
+input int        TIMEFRAME   = 60;
+input int       NBackCandles = 7;
+input string EndofOpeningPeriod = "08:00:";
+
 
 
 // internal variables ------------------------------------------------
@@ -38,5 +44,9 @@ double  BuyPercentage, SellPercentage;
 double  AcountMoney = AccountBalance();
 double  sellprofit, buyprofit;
 
-
+   
+string CURRENTTIME = TimeToStr(TimeLocal(), TIME_SECONDS);
+int EndofOpeningPeriodFound = StringFind(CURRENTTIME,EndofOpeningPeriod,0);
+int HighestCandle =  iHighest(_Symbol,TIMEFRAME,MODE_HIGH,NBackCandles,1);
+int LowestCandle =  iLowest(_Symbol,TIMEFRAME,MODE_LOW,NBackCandles,1);
 

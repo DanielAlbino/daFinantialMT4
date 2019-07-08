@@ -21,10 +21,10 @@
    - verificar o tamanho dentre high e low
    - verificar em histórico se esse tamanho é a abertura da vela de queda ou subida
    - verificar juntamente com algum indicador se é bom momento para fazer trade
-   - verificar a existencia de noticias que possam enfluenciar o mercado
+   - verificar a existencia de noticias que possam enfluenciar o mercado (fazer um mqh para as noticias)
+   - nas trades limitar as mesmas a um x% por ordem (gestão de trades)
 
-   - nas trades limitar as mesmas a um x% por ordem
-  ----------------------------------------------------------- /   
+----------------------------------------------------------- /   
 
 ------------------------
 INDICADORES PARA ANALISE
@@ -45,10 +45,24 @@ CLOSE  1H
 ------------------------
 GESTÃO
 ------------------------
-FECHO PERCENTUAL (quando profit atinge 5%)
+FECHO PERCENTUAL
 TRAILING STOP
-GESTÃO DE LOTES
+GESTÃO DE LOTES 
 ------------------------
+
+
+
+// -------------------------------------------------------------------
+
+FECHO PARCIAL 
+    - fecha uma parte da trade quando atinge um determinado valor ou distancia das médias p.ex.
+
+TRAILING STOP 
+    - acompanha o mercado quando a trade está em profit (p.ex. acompanha quando o mercado está a xpontos de distancia da trade)
+
+GESTÃO DE LOTES
+    - esta gestão vai ser feita diáriamente e não por trade.
+    - deve fazer o calculo para aumentar ou diminuir o lote dependendo do capital que tem nesse dia.
 
 
 
