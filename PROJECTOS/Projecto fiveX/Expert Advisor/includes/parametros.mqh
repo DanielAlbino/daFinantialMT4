@@ -6,6 +6,7 @@
 #property link      ""
 #property strict
 
+// External variables ------------------------------------------------
 input string    txt         = "-- MAGIC NUMBER--";    
 input int       MAGICNUMBER = 1001;     // magic number
 
@@ -28,6 +29,11 @@ input string    txt5        = "-- Partial close --";
 input int       valor_fecho = 2;        // partial close
 
 
+int string      txt6        = "-- Percentual Close --";
+int double      percent     = 5.0;     // percentage
+
+
+// internal variables ------------------------------------------------
 double  BuyPercentage, SellPercentage;
 double  AcountMoney = AccountBalance();
 double  sellprofit, buyprofit;
