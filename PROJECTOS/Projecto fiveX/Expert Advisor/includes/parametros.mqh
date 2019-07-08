@@ -49,6 +49,6 @@ double  sellprofit, buyprofit;
   
 string CURRENTTIME = TimeToStr(TimeLocal(), TIME_SECONDS);
 int EndofOpeningPeriodFound = StringFind(CURRENTTIME,EndofOpeningPeriod,0);
-int HighestCandle =  iHighest(_Symbol,TIMEFRAME,MODE_HIGH,NBackCandles,1);
-int LowestCandle =  iLowest(_Symbol,TIMEFRAME,MODE_LOW,NBackCandles,1);
+double HighestCandle =  High[iHighest(_Symbol,TIMEFRAME,MODE_HIGH,NBackCandles,1)];
+double LowestCandle =  Low[iLowest(_Symbol,TIMEFRAME,MODE_LOW,NBackCandles,1)];
 

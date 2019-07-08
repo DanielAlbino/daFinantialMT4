@@ -12,15 +12,15 @@
 
 
 void OnTick(){
-    getHighLowDaily();
+    HIGHLOWDAILY();
 }
 
-void getHighLowDaily(){
+void HIGHLOWDAILY(){
 
     EndofOpeningPeriodFound = StringFind(CURRENTTIME,EndofOpeningPeriod,0);
 
     if(EndofOpeningPeriodFound != -1){
-        HighestCandle =  iHighest(_Symbol,TIMEFRAME,MODE_HIGH,7,1);
-        LowestCandle =  iLowest(_Symbol,TIMEFRAME,MODE_LOW,7,1);
+        HighestCandle =  High[iHighest(_Symbol,TIMEFRAME,MODE_HIGH,7,1)];
+        LowestCandle =  Low[iLowest(_Symbol,TIMEFRAME,MODE_LOW,7,1)];
     }    
 }
