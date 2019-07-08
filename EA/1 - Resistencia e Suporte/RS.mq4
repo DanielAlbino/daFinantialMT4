@@ -10,20 +10,18 @@
     int LowestCandle =  iLowest(_Symbol,TIMEFRAME,MODE_LOW,7,1);
 
 
-
 void OnTick(){
     createObject();
 }
 
 
-
 void createObject(){
      //output the current time
     Comment("Current Time: ", CURRENTTIME);
-    HighestCandle =  iHighest(_Symbol,TIMEFRAME,MODE_HIGH,7,1);
-    LowestCandle =  iLowest(_Symbol,TIMEFRAME,MODE_LOW,7,1);
-
+    
     if(EndofOpeningPeriodFound != -1){
+        HighestCandle =  iHighest(_Symbol,TIMEFRAME,MODE_HIGH,7,1);
+        LowestCandle =  iLowest(_Symbol,TIMEFRAME,MODE_LOW,7,1);
          //delete the object if exists
          ObjectDelete("Rectangle");
          //create object
