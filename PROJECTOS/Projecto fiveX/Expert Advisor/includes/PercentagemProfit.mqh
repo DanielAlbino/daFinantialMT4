@@ -6,11 +6,8 @@
 #property link      ""
 #property strict
 
-#include "includes.mqh"
+#include "parametros.mqh"
 
-double  BuyPercentage, SellPercentage;
-double  AcountMoney = AccountBalance();
-double  sellprofit, buyprofit;
 
 void BUYTRADESPROFITLOSS(){
     buyprofit = BUYGAINPERCENTAGE(MAGICNUMBER);

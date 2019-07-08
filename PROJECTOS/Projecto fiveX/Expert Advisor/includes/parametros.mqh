@@ -28,7 +28,9 @@ input string    txt5        = "-- Partial close --";
 input int       valor_fecho = 2;        // partial close
 
 
-
+double  BuyPercentage, SellPercentage;
+double  AcountMoney = AccountBalance();
+double  sellprofit, buyprofit;
 
 
 
