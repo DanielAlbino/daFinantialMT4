@@ -8,28 +8,45 @@
 
 // ----------------------------------------------------------
 
+/ -----------------------------------------------------------
+  OBJECTIVOS PRINCIPAIS 
+        > FAZER 5% LUCROS POR Dia 
+        > este EA tem de dar para todos os major pairs
+        > ter 80% ou mais de profit
+        > drawdown reduzido (ideal < 10%) mesmo em lotes grandes
+        > gestão de lotes para aumentar o profit e reduzir a perda
 
+   ----------------------------------------------------------
+   - Verificar o high e low entre as 23 e as 7h da manhã 
+   - entre as 23 e 7h não são feitas trades
+   - verificar o tamanho dentre high e low
+   - verificar em histórico se esse tamanho é a abertura da vela de queda ou subida
+   - verificar juntamente com algum indicador se é bom momento para fazer trade
+   - verificar a existencia de noticias que possam enfluenciar o mercado
 
+   - nas trades limitar as mesmas a um x% por ordem
+  ----------------------------------------------------------- /   
+
+------------------------
 INDICADORES PARA ANALISE
 ------------------------
 MACD
 RSI
 VOLUME
 MOVING AVERAGE
-------------------------
 
+------------------------
 PADRÕES BASE
 ------------------------
 HIGHEST 1H
 LOWEST 1H
 OPEN   1H
 CLOSE  1H
+
 ------------------------
-
-
 GESTÃO
 ------------------------
-FECHO PERCENTUAL
+FECHO PERCENTUAL (quando profit atinge 5%)
 TRAILING STOP
 GESTÃO DE LOTES
 ------------------------
