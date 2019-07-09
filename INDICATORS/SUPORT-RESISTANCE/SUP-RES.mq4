@@ -30,7 +30,7 @@ void OnTick(){
 void HLCHECK(){
     CURRENTTIME = TimeToStr(TimeLocal(), TIME_SECONDS);
     EndofOpeningPeriodFound = StringFind(CURRENTTIME,EndofOpeningPeriod,0);
-    
+
     if(EndofOpeningPeriodFound != -1 ){
         HighestCandle =  iHighest(_Symbol,TIMEFRAME,MODE_HIGH,7,1);
         LowestCandle =  iLowest(_Symbol,TIMEFRAME,MODE_LOW,7,1);
@@ -41,11 +41,11 @@ void HLCHECK(){
 }
 
 void PUTARROW(){
-    if(Open[1] < HH && Open[1] > LL+(fabs(HH-LL)/2) && Close[1] > HH && Bid > HH && CURRENTTIME > "08:00" && CURRENTTIME < "23:00"){
+    if(Open[1] < HH && Open[1] > LL+(fabs(HH-LL)/2) && Close[1] > HH && Bid > HH && CURRENTTIME > "08:00" && CURRENTTIME < "23:00" && TIMEFRAME = Period()){
         DrawArrowUp("uparrow",Open[1]-20*Point,clrGreen);    
     }
 
-    if(Open[1] > LL && Open[1] < HH-(fabs(HH-LL)/2) && Close[1] < LL && Bid < LL && CURRENTTIME > "08:00" && CURRENTTIME < "23:00"){
+    if(Open[1] > LL && Open[1] < HH-(fabs(HH-LL)/2) && Close[1] < LL && Bid < LL && CURRENTTIME > "08:00" && CURRENTTIME < "23:00" && TIMEFRAME = Period()){
         DrawArrowDown("downarrow",Open[1]+20*Point,clrRed);
     }
   }
