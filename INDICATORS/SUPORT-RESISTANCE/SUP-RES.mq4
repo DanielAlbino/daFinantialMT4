@@ -41,7 +41,7 @@ void HLCHECK(){
 }
 
 void PUTARROW(){
-    if(Open[0] < HH && Open[0] > LL+(fabs(HH-LL)/2) && Close[0] > HH && Bid > HH && CURRENTTIME > "08:00" && CURRENTTIME < "23:00" ){
+    if(Open[0] < HH && Open[0] >= LL+(fabs(HH-LL)/2) && Close[0] > HH && Bid > HH && CURRENTTIME > "08:00" && CURRENTTIME < "23:00" ){
         DrawArrowUp("uparrow",Open[0]-20*Point,clrGreen);    
     }
 
