@@ -48,7 +48,7 @@ void PUTARROW(){
     if(Open[0] > LL && Open[0] < HH-(fabs(HH-LL)/2) && Close[0] < LL && Bid < LL && CURRENTTIME > "08:00" && CURRENTTIME < "23:00" ){
         DrawArrowDown("downarrow",Open[0]+20*Point,clrRed);
     }
-  }
+}
 
 void DrawArrowUp(string ArrowName,double LinePrice,color LineColor)
 {
