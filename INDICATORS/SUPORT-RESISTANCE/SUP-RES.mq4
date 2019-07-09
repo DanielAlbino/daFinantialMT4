@@ -41,21 +41,18 @@ void HLCHECK(){
 }
 
 void PUTARROW(){
-    if(Open[1] < HH && Open[1] > LL+(fabs(HH-LL)/2) && Close[1] > HH && Bid > HH && CURRENTTIME > "08:00" && CURRENTTIME < "23:00" && TIMEFRAME = Period()){
-        DrawArrowUp("uparrow",Open[1]-20*Point,clrGreen);    
+    if(Open[0] < HH && Open[0] > LL+(fabs(HH-LL)/2) && Close[0] > HH && Bid > HH && CURRENTTIME > "08:00" && CURRENTTIME < "23:00" && TIMEFRAME = Period()){
+        DrawArrowUp("uparrow",Open[0]-20*Point,clrGreen);    
     }
 
-    if(Open[1] > LL && Open[1] < HH-(fabs(HH-LL)/2) && Close[1] < LL && Bid < LL && CURRENTTIME > "08:00" && CURRENTTIME < "23:00" && TIMEFRAME = Period()){
-        DrawArrowDown("downarrow",Open[1]+20*Point,clrRed);
+    if(Open[0] > LL && Open[0] < HH-(fabs(HH-LL)/2) && Close[0] < LL && Bid < LL && CURRENTTIME > "08:00" && CURRENTTIME < "23:00" && TIMEFRAME = Period()){
+        DrawArrowDown("downarrow",Open[0]+20*Point,clrRed);
     }
   }
 
-
-
-
 void DrawArrowUp(string ArrowName,double LinePrice,color LineColor)
 {
-    ObjectCreate(ArrowName, OBJ_ARROW, 0, Time[0], LinePrice); //draw an up arrow
+    ObjectCreate(ArrowName, OBJ_ARROW, 0, Time[0], LinePrice);
     ObjectSet(ArrowName, OBJPROP_STYLE, STYLE_SOLID);
     ObjectSet(ArrowName, OBJPROP_ARROWCODE, SYMBOL_ARROWUP);
     ObjectSet(ArrowName, OBJPROP_COLOR,LineColor);
@@ -63,7 +60,7 @@ void DrawArrowUp(string ArrowName,double LinePrice,color LineColor)
 
 void DrawArrowDown(string ArrowName,double LinePrice,color LineColor)
 {
-    ObjectCreate(ArrowName, OBJ_ARROW, 0, Time[0], LinePrice); //draw an up arrow
+    ObjectCreate(ArrowName, OBJ_ARROW, 0, Time[0], LinePrice); 
     ObjectSet(ArrowName, OBJPROP_STYLE, STYLE_SOLID);
     ObjectSet(ArrowName, OBJPROP_ARROWCODE, SYMBOL_ARROWDOWN);
     ObjectSet(ArrowName, OBJPROP_COLOR,LineColor);
