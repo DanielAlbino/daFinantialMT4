@@ -12,8 +12,8 @@ string CURRENTTIME = TimeToStr(TimeLocal(), TIME_SECONDS);
 
 int EndofOpeningPeriodFound = StringFind(CURRENTTIME,EndofOpeningPeriod,0);
 
-int HighestCandle =  iHighest(_Symbol,TIMEFRAME,MODE_HIGH,8,1);
-int LowestCandle =  iLowest(_Symbol,TIMEFRAME,MODE_LOW,8,1);
+int HighestCandle =  iHighest(_Symbol,TIMEFRAME,MODE_HIGH,9,1);
+int LowestCandle =  iLowest(_Symbol,TIMEFRAME,MODE_LOW,9,1);
 
 int OnInit()
   {
@@ -32,8 +32,8 @@ void HLCHECK(){
     EndofOpeningPeriodFound = StringFind(CURRENTTIME,EndofOpeningPeriod,0);
 
     if(EndofOpeningPeriodFound != -1 ){
-        HighestCandle =  iHighest(_Symbol,TIMEFRAME,MODE_HIGH,7,1);
-        LowestCandle =  iLowest(_Symbol,TIMEFRAME,MODE_LOW,7,1);
+        HighestCandle =  iHighest(_Symbol,TIMEFRAME,MODE_HIGH,9,1);
+        LowestCandle =  iLowest(_Symbol,TIMEFRAME,MODE_LOW,9,1);
         HH = High[HighestCandle];
         LL = Low[LowestCandle];
         totalHL = fabs(HH-LL);
@@ -41,11 +41,11 @@ void HLCHECK(){
 }
 
 void PUTARROW(){
-    if(Open[0] < HH && Open[0] > LL+(fabs(HH-LL)/2) && Close[0] > HH && Bid > HH && CURRENTTIME > "08:00" && CURRENTTIME < "23:00" && TIMEFRAME = Period()){
+    if(Open[0] < HH && Open[0] > LL+(fabs(HH-LL)/2) && Close[0] > HH && Bid > HH && CURRENTTIME > "08:00" && CURRENTTIME < "23:00" ){
         DrawArrowUp("uparrow",Open[0]-20*Point,clrGreen);    
     }
 
-    if(Open[0] > LL && Open[0] < HH-(fabs(HH-LL)/2) && Close[0] < LL && Bid < LL && CURRENTTIME > "08:00" && CURRENTTIME < "23:00" && TIMEFRAME = Period()){
+    if(Open[0] > LL && Open[0] < HH-(fabs(HH-LL)/2) && Close[0] < LL && Bid < LL && CURRENTTIME > "08:00" && CURRENTTIME < "23:00" ){
         DrawArrowDown("downarrow",Open[0]+20*Point,clrRed);
     }
   }
