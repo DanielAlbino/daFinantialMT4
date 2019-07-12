@@ -37,5 +37,4 @@ void OnTick()
           if(timecheck == 24){timecheck = 0;}
         }   
       }
-       
   }
