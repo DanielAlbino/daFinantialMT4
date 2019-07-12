@@ -1,0 +1,21 @@
+Morning Star
+
+Primeira vela[2]
+uma vela em tendência de baixa
+corpo negro
+
+C[2] < O[2]
+
+
+Segunda vela [1]
+corpo branco ou preto
+o corpo da vela está localizado abaixo do corpo anterior
+
+O[1]<C[2] && C[1] < C[2]    
+//O CORPO DA VELA ESTÁ LOCALIZADO ABAIXO, OU SEJA TANTO O OPEN COMO CLOSE TEM DE SER ABAIXO DO CLOSE DA ANTERIOR
+
+
+Terceira vela  [0]
+corpo branco
+o corpo da vela está localizado acima do corpo anterior
+a vela se fecha pelo menos na metade do corpo da primeira linha
