@@ -300,7 +300,6 @@ int start(){
       }
       
       // Check for Three Inside Up pattern
-      
       if ((O2>C2)&&(C1>O1)&&(C1<=O2)&&(C2<=O1)&&((C1-O1)<(O2-C2))&&(C>O)&&(C>C1)&&(O>O1)) {
          if (Display_Three_Inside_Up == true) {   
             ObjectCreate(PatternText[shift], OBJ_TEXT, 0, Time[shift1], Low[shift1] - Range*1.5);
@@ -340,7 +339,7 @@ int start(){
             setalert = 1;
          }
       }
-      
+
       
       // Check for Morning Doji Star
       
