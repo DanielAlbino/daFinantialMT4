@@ -6,3 +6,10 @@ Here you will find some code for MT4. You will find some tests, studies and comp
 
 Meta Trader uses C as base language for their robots. you can find more information at https://www.metatrader4.com/en/automated-trading/mql4-programming
 
+
+
+**Pastas/Folders**
+
+**Portuguese  -  English**
+Estudo        -   Study
+Projectos     -   Projects
