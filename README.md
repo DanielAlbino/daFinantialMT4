@@ -1,8 +1,5 @@
 # Meta Trader 4 robots
 
-
-Hi I'm daniel!
-
 Here you will find some code for MT4. You will find some tests, studies and completed projects I've been doing.
 
 **Language**
