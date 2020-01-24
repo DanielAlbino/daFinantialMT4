@@ -11,5 +11,7 @@ Meta Trader uses C as base language for their robots. you can find more informat
 **Pastas/Folders**
 
 **Portuguese  -  English**
+
 Estudo        -   Study
+
 Projectos     -   Projects
